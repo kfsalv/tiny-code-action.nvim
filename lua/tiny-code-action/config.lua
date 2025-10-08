@@ -9,6 +9,7 @@ M.VALID_PICKERS = {
 }
 
 M.VALID_BACKENDS = {
+  git = true,
   vim = true,
   delta = true,
   difftastic = true,
@@ -52,6 +53,10 @@ M.default_config = {
   backend = "vim",
   picker = nil,
   backend_opts = {
+    git = {
+      header_lines_to_remove = 4,
+      args = {},
+    },
     delta = {
       header_lines_to_remove = 4,
       args = {
@@ -72,16 +77,16 @@ M.default_config = {
   },
   resolve_timeout = 100,
   signs = {
-    quickfix = { "", { link = "DiagnosticWarning" } },
-    others = { "", { link = "DiagnosticWarning" } },
+    quickfix = { "", { link = "DiagnosticWarn" } },
+    others = { "", { link = "DiagnosticWarn" } },
     refactor = { "", { link = "DiagnosticInfo" } },
     ["refactor.move"] = { "󰪹", { link = "DiagnosticInfo" } },
     ["refactor.extract"] = { "", { link = "DiagnosticError" } },
-    ["source.organizeImports"] = { "", { link = "DiagnosticWarning" } },
+    ["source.organizeImports"] = { "", { link = "DiagnosticWarn" } },
     ["source.fixAll"] = { "󰃢", { link = "DiagnosticError" } },
     ["source"] = { "", { link = "DiagnosticError" } },
-    ["rename"] = { "󰑕", { link = "DiagnosticWarning" } },
-    ["codeAction"] = { "", { link = "DiagnosticWarning" } },
+    ["rename"] = { "󰑕", { link = "DiagnosticWarn" } },
+    ["codeAction"] = { "", { link = "DiagnosticWarn" } },
   },
 }
 
